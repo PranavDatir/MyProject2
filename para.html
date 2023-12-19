@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .body{
+        background-color: aquamarine;
+        margin: auto;
+        display: flex;
+        border-style: solid;
+        height: 300px;
+        width: 650px
+        
+       
+    }
+    .para{
+        border-style: solid;
+        height: 280px;
+        top: 7px;
+        left: 17px;
+        position: relative;
+        background-color: WHITE;
+    }
+    .old{
+        position: relative;
+        left: 30px
+    }
+    .new{
+        position: relative;
+        left: 43px;
+
+    }
+    
+</style>
+<body>
+    <div class="body">
+        <div class="para">
+            <h1>Paragraph</h1>
+            <textarea name="para" id="para" cols="30" rows="13"></textarea>
+        </div >
+        <div class="old">
+            <h3>Old Text</h3>
+            <input type="text" name="old" id="old"><br><br>
+            <button type="button" onclick="replace()">Replace String</button>
+        </div>
+        <div class="new">
+            <h3>New Text</h3>
+            <input type="text" name="new" id="new"><br><br>
+            <button type="button" onclick="replace_all()">Replace All</button>
+        </div>
+    </div>
+    <script>
+        
+        function replace(X,Y){
+            var str=para.value
+            var a=document.getElementById("old").value;
+            var b=document.getElementById("new").value;
+            str=str.replace(a,b)
+            para.value=str
+        }
+        function replace_all(P,Q){
+            var str=para.value
+            var a=document.getElementById("old").value;
+            var b=document.getElementById("new").value;
+            str=str.replaceAll(a,b)
+            para.value=str
+        }
+        
+        
+    </script>
+</body>
+</html>

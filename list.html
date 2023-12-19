@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .side{
+        border-style: solid;
+        height: 200px;
+        width: 376px;
+        margin: auto;
+        background-color: blanchedalmond
+        
+    }
+    .entry{
+        left: 10px;
+        top: 10px;
+        position: relative;
+    }
+</style>
+<body>
+    <div class="side">
+        <form>
+            <div class="entry">
+                <label>Enter Student Name</label><br>
+                <input type="text" name="name" id="name">
+                <button type="button" onclick="add()">Add</button>
+                <button type="button" onclick="list()">List of all Students</button>
+             </div>
+
+        </form>
+    </div>
+    <script>
+        var a=[];
+        function add(){
+            a.push(document.getElementById("name").value);
+        }
+        function list(){
+            document.write(a);
+        }
+
+    </script>
+</body>
+</html>

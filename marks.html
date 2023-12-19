@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .body{
+        background-color: gray;
+        margin: auto;
+        display: flex;
+        border-style: solid;
+        height: 200px;
+        width: 336px
+    }
+    .entry{
+        left: 10px;
+        position: relative;
+    }
+    .check{
+        width: 100px;
+        position: relative;
+        left: 30px;
+        top: 55px
+    }
+</style>
+<body>
+    <div class="body">
+        <div class="entry">
+            <h2>Enter Your Marks</h2>
+            <input type="text" name="marks" id="marks"> <br><br><br><br>
+            <label id="h1">Your result is:</label>
+        </div>
+        <div class="check">
+            <button type="button" onclick="marks()" >Check Result with Grade</button>
+        </div>
+    </div>
+    <script>
+    function marks(){
+        var a=(document.getElementById("marks").value);
+        if(a>=80){
+            var result = ("Destinction")
+        }
+        else if(a>=60){
+            var result = ("First Class")
+        }
+        else if(a>=50){
+            var result = ("Second Class")
+        }
+        else if(a>=35){
+            var result = ("Pass")
+        }
+        else{
+            var result = ("Fail") 
+        }
+        h1.innerText=result
+    }
+</script>
+</body>
+</html>

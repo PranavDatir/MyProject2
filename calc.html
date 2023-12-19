@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-image: url(../Assets/Images/bg.jpg);
+        background-repeat: no-repeat;
+    background-size: cover;
+    }
+    .outline{
+        border: 2px solid;
+        height: 250px;
+        width: 400px;
+        margin: auto;
+        position: relative;
+        top: 50px;
+        background-color: floralwhite;
+    }
+    .inp{
+        left: 20px;
+        position: absolute;
+        top: 73px;
+    }
+    .cal{
+        left: 20px;
+        position: absolute
+    }
+</style>
+<body>
+
+    <div class="outline">
+        <h1 class="cal">Calculator</h1>
+    
+    <form>
+        <div class="inp">
+            <label>Number 1</label>
+            <input type="text" name="num1" id="num1" ><br><br>
+        
+            <label>Number 2</label>
+            <input type="text" name="num2" id="num2" ><br><br>
+       
+            <button type="button" onclick="add()">Add</button>
+            <button type="button" onclick="sub()">Sub</button>
+            <button type="button" onclick="prod()">Prod</button>
+            <button type="button" onclick="div()">Div</button><br><br>
+        
+            <label id="h1">Result :</label>
+            
+        </div>
+    </form>
+    </div>
+    <script>
+        function add(){
+            var a=document.getElementById("num1").value;
+            var b=document.getElementById("num2").value;
+            var result = (parseInt(a)+parseInt(b));
+            h1.innerText=result
+        }
+        function sub(){
+            var a=document.getElementById("num1").value;
+            var b=document.getElementById("num2").value;
+            var result = (parseInt(a)-parseInt(b));
+            h1.innerText=result
+        }
+        function prod(){
+            var a=document.getElementById("num1").value;
+            var b=document.getElementById("num2").value;
+            var result = (parseInt(a)*parseInt(b));
+            h1.innerText=result
+        }
+        function div(){
+            var a=document.getElementById("num1").value;
+            var b=document.getElementById("num2").value;
+            var result = (parseInt(a)/parseInt(b));
+            h1.innerText=result
+        }
+        
+    </script>
+</body>
+</html>
